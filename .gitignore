@@ -1,1 +1,6 @@
-CLAUDE.md
+.claude/
+
+# Node (news updater — scripts/update-news.mjs)
+node_modules/
+package-lock.json
+package.json

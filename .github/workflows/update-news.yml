@@ -1,26 +1,30 @@
 # =============================================================
-# ClaudeTools — Mise à jour automatique des actualités (MODÈLE)
+# ClaudeTools — Mise à jour automatique des actualités (Option B)
 # -------------------------------------------------------------
-# Objectif : régénérer assets/data/news.js avec les dernières
-# actualités Claude, puis commit + push automatiquement.
+# Tourne sur les serveurs de GitHub — votre ordinateur peut être éteint.
+# Chaque lundi (et à la demande), régénère assets/data/news.js avec
+# les dernières actualités Claude, puis commit + push.
 #
-# ⚙️ Par défaut, ce workflow ne se déclenche QUE manuellement
-#    (onglet Actions → « Run workflow »). Pour l'activer sur un
-#    rythme régulier, décommentez le bloc `schedule` ci-dessous.
+# 🔑 PRÉREQUIS (une seule fois) :
+#    Settings → Secrets and variables → Actions → New repository secret
+#    Nom : ANTHROPIC_API_KEY   Valeur : votre clé d'API Anthropic
 #
-# 🔑 La variante « qualité » utilise l'API Claude : ajoutez le
-#    secret ANTHROPIC_API_KEY dans Settings → Secrets → Actions.
-#    Voir NEWS.md (Option B) pour les détails et alternatives.
+# ▶️ Tester tout de suite : onglet Actions → ce workflow → « Run workflow ».
 # =============================================================
 name: Mettre à jour les actualités
 
 on:
-  workflow_dispatch: {}          # déclenchement manuel
-  # schedule:
-  #   - cron: "0 7 * * 1"        # tous les lundis à 07:00 UTC (à décommenter pour activer)
+  workflow_dispatch: {}            # déclenchement manuel (bouton « Run workflow »)
+  schedule:
+    - cron: "0 6 * * 1"            # tous les lundis à 06:00 UTC = 08:00 Europe/Paris (été)
 
 permissions:
-  contents: write                # nécessaire pour commit + push
+  contents: write                  # nécessaire pour commit + push
+
+# Évite les exécutions simultanées qui se marcheraient dessus.
+concurrency:
+  group: update-news
+  cancel-in-progress: false
 
 jobs:
   update-news:
@@ -29,29 +33,21 @@ jobs:
       - name: Récupérer le dépôt
         uses: actions/checkout@v4
 
-      # --- Variante QUALITÉ : Claude rédige les actualités ---
-      # Utilise l'action officielle Claude Code. Vérifiez la
-      # dernière version/les entrées sur la doc Anthropic.
-      - name: Mettre à jour news.js avec Claude
-        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
-        uses: anthropics/claude-code-action@v1
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          prompt: |
-            Mets à jour les actualités du site ClaudeTools.
-            1. Recherche sur le web les nouveautés récentes de l'univers Claude
-               (Anthropic) : modèles, Claude Code, Cowork, Connecteurs/MCP, Skills,
-               annonces entreprise.
-            2. Sélectionne 5 à 8 nouvelles fiables et marquantes.
-            3. Réécris ENTIÈREMENT assets/data/news.js en respectant exactement le
-               format (champs date, tag, title, summary, url). Résumés en français,
-               neutres, 1–2 phrases. Tri par date décroissante. Mets
-               CLAUDE_NEWS_UPDATED à la date du jour. tag ∈ {Modèle, Produit, Code,
-               Cowork, Connecteurs, Skills, Entreprise}.
-            4. Ne modifie aucun autre fichier.
+          node-version: "20"
 
-      # --- Commit & push des changements éventuels ---
-      - name: Commit & push
+      - name: Installer le SDK Anthropic
+        run: npm install @anthropic-ai/sdk
+
+      - name: Régénérer assets/data/news.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NEWS_MODEL: claude-sonnet-4-6      # passez à claude-opus-4-8 pour une curation plus fine
+        run: node scripts/update-news.mjs
+
+      - name: Commit & push si changement
         run: |
           if [[ -n "$(git status --porcelain assets/data/news.js)" ]]; then
             git config user.name  "github-actions[bot]"
@@ -60,5 +56,5 @@ jobs:
             git commit -m "chore: maj actualités"
             git push
           else
-            echo "Aucun changement d'actualités."
+            echo "Aucun changement d'actualités cette semaine."
           fi

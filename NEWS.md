@@ -35,49 +35,38 @@ sans souci de CORS. `news.html` trie, formate les dates en français et fait le 
 
 ---
 
-## 2. Options pour automatiser
+## 2. Automatisation : Option B (active) ✅
 
-### Option A — Claude Code planifié ⭐ *(recommandé, correspond à votre config)*
-C'est l'option la plus alignée avec votre setup : **seul Claude Code est branché à votre MCP GitHub**.
+**C'est l'option mise en place** — elle tourne entièrement sur les serveurs de GitHub,
+donc **votre ordinateur peut être éteint**.
 
-- Créez une **routine planifiée** (ex. tous les lundis) via la commande `/schedule`
-  de Claude Code, avec le prompt de la section 3 ci-dessous.
-- À chaque exécution, Claude Code : recherche les dernières actualités Claude sur le web,
-  réécrit `assets/data/news.js`, puis **commit + push** (via git ou le MCP GitHub).
-- ✅ Avantages : qualité éditoriale (résumés propres en français), pousse tout seul,
-  aucune clé d'API à gérer si vous utilisez votre session Claude Code.
-- ⚠️ À garder en tête : la machine/agent doit pouvoir s'exécuter à l'heure prévue.
+- Workflow : `.github/workflows/update-news.yml` — s'exécute **chaque lundi à 08:00 (Europe/Paris)**
+  et à la demande (bouton « Run workflow »).
+- Script : `scripts/update-news.mjs` — utilise l'**API Claude + la recherche web** pour
+  trouver les dernières actualités, les résumer en français, et réécrire `assets/data/news.js`.
+- Le workflow **commit + push** ensuite (uniquement s'il y a un changement). GitHub Pages
+  redéploie tout seul.
 
-### Option B — GitHub Actions (cloud, autonome)
-Un workflow tourne sur un cron GitHub, sans votre machine. Modèle fourni :
-`.github/workflows/update-news.yml` (déclenchement **manuel** par défaut ; décommentez
-le `schedule` pour l'activer).
+### ⚙️ Activation (une seule fois)
+1. Repo → **Settings → Secrets and variables → Actions → New repository secret**.
+2. Nom : `ANTHROPIC_API_KEY` — Valeur : votre clé d'API Anthropic.
+3. (Test) Onglet **Actions** → « Mettre à jour les actualités » → **Run workflow**.
 
-- Variante **qualité** : le workflow appelle l'API Claude (secret `ANTHROPIC_API_KEY`)
-  pour rédiger les résumés, puis commit le fichier.
-- Variante **zéro-secret** : un petit script récupère un flux RSS d'actualités
-  (ex. Google News « Anthropic Claude ») et génère `news.js`. Moins « propre »
-  éditorialement, mais 100 % autonome et gratuit.
-- ✅ Avantages : tourne dans le cloud, indépendant de votre poste.
-- ⚠️ À garder en tête : la variante qualité nécessite un secret d'API.
+> 💡 Modèle par défaut : `claude-sonnet-4-6` (bon rapport qualité/coût). Pour une curation
+> plus fine, passez `NEWS_MODEL` à `claude-opus-4-8` dans le workflow.
+>
+> ⚠️ GitHub désactive les workflows planifiés après ~60 jours sans activité sur le dépôt —
+> un simple push les réactive.
 
-### Option C — Claude Cowork
-Cowork peut **rechercher et rédiger** le fil d'actualités très bien. Mais dans votre
-config, **il n'a pas accès au MCP GitHub** : il ne peut donc pas pousser tout seul.
+### Autres pistes (non retenues)
 
-- Usage pratique : demandez à Cowork de produire le tableau `CLAUDE_NEWS` à jour,
-  puis collez-le dans `news.js` (ou laissez Claude Code faire le push).
-- Devient pleinement automatique si vous ajoutez un **connecteur GitHub** à Cowork.
-
-### Option D — Récupération côté navigateur (live)
-La page elle-même irait chercher un flux à chaque visite (RSS-to-JSON, API…).
-
-- ✅ Avantages : « temps réel », aucun commit.
-- ⚠️ Inconvénients : dépend d'un service tiers + CORS, clé d'API exposée côté client,
-  fiabilité variable. **Non recommandé** pour un site propre et durable.
-
-**Recommandation :** Option A (Claude Code planifié) pour la qualité et parce que c'est
-déjà branché à votre GitHub ; Option B en complément si vous voulez du 100 % cloud.
+- **Claude Code planifié** *(Option A)* — une routine cloud `/schedule` qui fait la même
+  chose. Aussi valable, mais nécessite que votre compte GitHub soit connecté à Claude Code
+  (ce qui n'était pas le cas ici), d'où le choix de l'Option B.
+- **Claude Cowork** — excellent pour **rechercher et rédiger** le fil, mais sans connecteur
+  GitHub il ne peut pas pousser tout seul : il faut coller le résultat ou laisser Code/Actions publier.
+- **Récupération côté navigateur (live)** — la page irait chercher un flux à chaque visite.
+  Dépend d'un service tiers + CORS, expose une clé côté client : **non recommandé**.
 
 ---
 
@@ -99,7 +88,8 @@ déjà branché à votre GitHub ; Option B en complément si vous voulez du 100 
 
 | Fichier | Rôle |
 | --- | --- |
-| `assets/data/news.js` | **La seule source à éditer.** Le tableau des actualités. |
+| `assets/data/news.js` | Les actualités affichées. Régénéré par l'automatisation ; éditable à la main. |
 | `news.html` | La page d'affichage (rendu automatique, rien à modifier). |
 | `assets/js/script.js` | Logique de rendu (tri, dates FR, pastilles colorées). |
-| `.github/workflows/update-news.yml` | Modèle d'automatisation GitHub Actions (Option B). |
+| `scripts/update-news.mjs` | Le script qui recherche les actus (API Claude + web) et réécrit `news.js`. |
+| `.github/workflows/update-news.yml` | L'automatisation GitHub Actions (Option B) — lundi 08:00 Paris. |
