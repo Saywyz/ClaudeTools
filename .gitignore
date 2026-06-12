@@ -1,4 +1,5 @@
 .claude/
 
-# Journal de l'automatisation locale des actualités (Option A)
+# Automatisation locale des actualités (Option A)
 scripts/update-news.log
+scripts/.last-news-update

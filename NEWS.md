@@ -38,10 +38,31 @@ lundi matin. Claude recherche les dernières actualités sur le web, réécrit `
 puis **commit + push**. GitHub Pages redéploie tout seul.
 
 - **Aucune clé d'API** — utilise votre licence/abonnement Claude Code déjà connecté.
-- Script lancé : **`scripts/update-news.ps1`** (contient le prompt ; éditable).
-- Tâche planifiée : **`ClaudeTools - MAJ actualites`**.
+- Script de travail : **`scripts/update-news.ps1`** (contient le prompt ; éditable).
 
-### Déclencheur — « le lundi matin, quand j'allume le PC »
+> 🎛️ **Deux déclencheurs possibles, le même script `update-news.ps1`** — choisissez :
+> - **Hook « au lancement de Claude »** — part quand vous ouvrez Claude Code (1×/semaine max). Ne tourne que si vous lancez Claude.
+> - **Tâche planifiée Windows** — part lundi 09:00 même si vous n'ouvrez pas Claude (rattrapage au démarrage).
+
+### Déclencheur A — au lancement de Claude (hook SessionStart)
+Ajoutez ce hook dans `~/.claude/settings.json` (clé `hooks`) :
+
+```json
+"SessionStart": [
+  {
+    "matcher": "startup",
+    "hooks": [
+      { "type": "command", "command": "powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"C:\\Users\\IlièsAït-Souar\\Desktop\\ClaudeTools\\ClaudeTools\\scripts\\news-on-launch.ps1\"" }
+    ]
+  }
+]
+```
+
+`scripts/news-on-launch.ps1` ne déclenche la mise à jour qu'**une fois par semaine**
+(premier lancement à partir du lundi) et lance `update-news.ps1` en arrière-plan, sans
+ralentir la session. Pour désactiver : retirez le bloc `SessionStart`.
+
+### Déclencheur B — tâche planifiée Windows (« le lundi matin, quand j'allume le PC »)
 La tâche est réglée sur **lundi 09:00**, avec l'option **« exécuter dès que possible
 après un démarrage manqué » (`StartWhenAvailable`)**. Concrètement :
 
@@ -101,6 +122,7 @@ décroissant ; `CLAUDE_NEWS_UPDATED` = date du jour), ne toucher à rien d'autre
 | `assets/data/news.js` | Les actualités affichées. Régénéré par l'automatisation ; éditable à la main. |
 | `news.html` | La page d'affichage (rendu automatique, rien à modifier). |
 | `assets/js/script.js` | Logique de rendu (tri, dates FR, pastilles colorées). |
-| `scripts/update-news.ps1` | Lance Claude Code (licence) pour rechercher les actus et réécrire `news.js`. |
+| `scripts/update-news.ps1` | Le travail : lance Claude Code (licence) pour rechercher les actus et réécrire `news.js`. |
+| `scripts/news-on-launch.ps1` | Déclencheur A : hook qui lance l'updater 1×/semaine au démarrage de Claude. |
 | `scripts/update-news.log` | Journal des exécutions (ignoré par git). |
-| Tâche `ClaudeTools - MAJ actualites` | Déclencheur Windows : lundi 09:00 + rattrapage au démarrage. |
+| Tâche `ClaudeTools - MAJ actualites` | Déclencheur B (optionnel) : Windows, lundi 09:00 + rattrapage au démarrage. |

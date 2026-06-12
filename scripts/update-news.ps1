@@ -42,8 +42,11 @@ Tu maintiens le fil d'actualités du site ClaudeTools (le dépôt git du dossier
 Travaille de façon autonome, sans poser de question.
 '@
 
-# -p : mode non-interactif (headless) ; skip-permissions : autorise édition + git sans invite.
+# -p : mode non-interactif (headless).
+# Permissions VOLONTAIREMENT limitées (pas de bypass total) : édition de fichiers,
+# recherche web, et commandes git uniquement. Claude ne peut rien faire d'autre.
 # $null en entrée évite l'attente de stdin quand la tâche tourne sans console.
-$null | & $claude -p $prompt --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $log -Append
+$allowed = 'Read,Glob,Grep,Edit,Write,WebSearch,WebFetch,Bash(git:*)'
+$null | & $claude -p $prompt --permission-mode acceptEdits --allowedTools $allowed 2>&1 | Tee-Object -FilePath $log -Append
 
 "==== $(Get-Date -Format o) : terminé (exit $LASTEXITCODE) ====" | Out-File -FilePath $log -Append -Encoding utf8
