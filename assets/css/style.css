@@ -730,6 +730,13 @@ h1, h2, h3, h4 {
   font-size: 13px;
   color: #807b71;
 }
+.footer-bottom a {
+  color: #c9c4ba;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+.footer-bottom a:hover { color: var(--accent); }
 
 /* ---------- Reveal animation ---------- */
 .reveal {
