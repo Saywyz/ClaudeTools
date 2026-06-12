@@ -1,6 +1,4 @@
 .claude/
 
-# Node (news updater — scripts/update-news.mjs)
-node_modules/
-package-lock.json
-package.json
+# Journal de l'automatisation locale des actualités (Option A)
+scripts/update-news.log
