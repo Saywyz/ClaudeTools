@@ -1,0 +1,64 @@
+# =============================================================
+# ClaudeTools — Mise à jour automatique des actualités (MODÈLE)
+# -------------------------------------------------------------
+# Objectif : régénérer assets/data/news.js avec les dernières
+# actualités Claude, puis commit + push automatiquement.
+#
+# ⚙️ Par défaut, ce workflow ne se déclenche QUE manuellement
+#    (onglet Actions → « Run workflow »). Pour l'activer sur un
+#    rythme régulier, décommentez le bloc `schedule` ci-dessous.
+#
+# 🔑 La variante « qualité » utilise l'API Claude : ajoutez le
+#    secret ANTHROPIC_API_KEY dans Settings → Secrets → Actions.
+#    Voir NEWS.md (Option B) pour les détails et alternatives.
+# =============================================================
+name: Mettre à jour les actualités
+
+on:
+  workflow_dispatch: {}          # déclenchement manuel
+  # schedule:
+  #   - cron: "0 7 * * 1"        # tous les lundis à 07:00 UTC (à décommenter pour activer)
+
+permissions:
+  contents: write                # nécessaire pour commit + push
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      # --- Variante QUALITÉ : Claude rédige les actualités ---
+      # Utilise l'action officielle Claude Code. Vérifiez la
+      # dernière version/les entrées sur la doc Anthropic.
+      - name: Mettre à jour news.js avec Claude
+        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Mets à jour les actualités du site ClaudeTools.
+            1. Recherche sur le web les nouveautés récentes de l'univers Claude
+               (Anthropic) : modèles, Claude Code, Cowork, Connecteurs/MCP, Skills,
+               annonces entreprise.
+            2. Sélectionne 5 à 8 nouvelles fiables et marquantes.
+            3. Réécris ENTIÈREMENT assets/data/news.js en respectant exactement le
+               format (champs date, tag, title, summary, url). Résumés en français,
+               neutres, 1–2 phrases. Tri par date décroissante. Mets
+               CLAUDE_NEWS_UPDATED à la date du jour. tag ∈ {Modèle, Produit, Code,
+               Cowork, Connecteurs, Skills, Entreprise}.
+            4. Ne modifie aucun autre fichier.
+
+      # --- Commit & push des changements éventuels ---
+      - name: Commit & push
+        run: |
+          if [[ -n "$(git status --porcelain assets/data/news.js)" ]]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add assets/data/news.js
+            git commit -m "chore: maj actualités"
+            git push
+          else
+            echo "Aucun changement d'actualités."
+          fi

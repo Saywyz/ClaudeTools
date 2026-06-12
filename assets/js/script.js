@@ -116,6 +116,62 @@
     setTimeout(tick, 600);
   }
 
+  /* ---------- Actualités (news page) ---------- */
+  const newsGrid = document.getElementById("newsGrid");
+  if (newsGrid) {
+    const MONTHS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+    function frDate(iso) {
+      if (!iso || iso.indexOf("-") === -1) return iso || "";
+      const p = iso.split("-").map(Number);
+      return p[2] + " " + (MONTHS[p[1] - 1] || "") + " " + p[0];
+    }
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+    // Tag → theme color (matches the rest of the site)
+    const TAG_STYLE = {
+      "Modèle":      "background:#fbf0ea;color:#c15f3c;",
+      "Produit":     "background:#fbf0ea;color:#c15f3c;",
+      "Code":        "background:#e3eadb;color:#57663f;",
+      "Cowork":      "background:#efe4d6;color:#8a6033;",
+      "Connecteurs": "background:#e2ecf3;color:#3f5d75;",
+      "Skills":      "background:#ece4f3;color:#6b4f87;",
+      "Entreprise":  "background:#f0eee6;color:#6b6a63;"
+    };
+    const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+    const data = Array.isArray(window.CLAUDE_NEWS) ? window.CLAUDE_NEWS.slice() : [];
+    data.sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
+
+    if (!data.length) {
+      newsGrid.outerHTML = '<p class="news-empty">Aucune actualité pour le moment. Le fichier <code>assets/data/news.js</code> sera bientôt mis à jour.</p>';
+    } else {
+      newsGrid.innerHTML = data.map(function (n) {
+        const tagStyle = TAG_STYLE[n.tag] || "";
+        const link = n.url
+          ? '<a class="card-link" href="' + esc(n.url) + '" target="_blank" rel="noopener">Lire la suite ' + arrow + '</a>'
+          : "";
+        return '' +
+          '<article class="news-card">' +
+            '<div class="news-top">' +
+              '<span class="news-tag" style="' + tagStyle + '">' + esc(n.tag || "Actu") + '</span>' +
+              '<span class="news-date">' + esc(frDate(n.date)) + '</span>' +
+            '</div>' +
+            '<h3>' + esc(n.title) + '</h3>' +
+            '<p>' + esc(n.summary) + '</p>' +
+            link +
+          '</article>';
+      }).join("");
+    }
+
+    const updatedEl = document.getElementById("newsUpdated");
+    if (updatedEl && window.CLAUDE_NEWS_UPDATED) {
+      updatedEl.textContent = frDate(window.CLAUDE_NEWS_UPDATED);
+    }
+  }
+
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

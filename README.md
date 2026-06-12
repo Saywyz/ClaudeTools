@@ -8,12 +8,24 @@ An interactive, beginner-friendly website that explains the three main ways to u
 
 ## Pages
 
+All user-facing content is **in French**.
+
 | Page | What it covers |
 | --- | --- |
-| `index.html` | Overview, the three tools, what Claude can do, a quick "which one?" table |
-| `claude.html` | The chat assistant — features, an interactive task explorer, tips, FAQ |
-| `cowork.html` | The AI teammate — chat vs. cowork, how it works, use cases, FAQ |
-| `code.html` | The coding companion — live terminal demo, features, guardrails, FAQ |
+| `index.html` | Accueil — overview, the tools, "wahou" examples, a quick "which one?" table |
+| `claude.html` | Claude — features + deep-dives (Projets, Recherche approfondie, Effort, Artéfacts, Vision) |
+| `cowork.html` | Claude Cowork — chat vs. cowork, how it works, use cases, FAQ |
+| `code.html` | Claude Code — live terminal demo, features, guardrails, FAQ |
+| `connectors.html` | Connecteurs — what they are, logo grid, "wahou" examples, security |
+| `skills.html` | Skills — examples, Skills vs Connecteurs, "wahou" examples |
+| `news.html` | Actualités — auto-rendered Claude news feed (see below) |
+
+## Latest-news feed
+
+`news.html` renders a Claude news feed from a single data file, **`assets/data/news.js`**.
+Edit that file (or let an automation rewrite it) and the page updates itself.
+See **[`NEWS.md`](NEWS.md)** for the format and for ways to automate updates
+(scheduled Claude Code, GitHub Actions, Claude Cowork…).
 
 ## Tech
 

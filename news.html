@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualités Claude — Les dernières nouveautés | ClaudeTools</title>
+  <meta name="description" content="Les dernières actualités de l'univers Claude, mises à jour automatiquement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d97757'%3E%3Cpath d='M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">ClaudeTools</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="claude.html">Claude</a>
+        <a href="cowork.html">Cowork</a>
+        <a href="code.html">Code</a>
+        <a href="connectors.html">Connecteurs</a>
+        <a href="skills.html">Skills</a>
+        <a href="news.html">Actualités</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <span class="blob blob--1"></span>
+      <div class="container reveal in center">
+        <span class="eyebrow">📰 Actualités</span>
+        <h1 style="margin-inline:auto;">Les dernières nouveautés de l'univers Claude.</h1>
+        <p class="hero-lede" style="margin-inline:auto;">Un fil d'actualité simple et mis à jour automatiquement : nouveaux modèles, fonctionnalités, connecteurs et Skills. L'idéal pour rester à jour sans effort.</p>
+        <div class="news-meta">
+          <span class="news-updated"><span class="live-dot"></span> Dernière mise à jour : <strong id="newsUpdated">—</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fil d'actualités -->
+    <section class="section section--alt">
+      <div class="container">
+        <div id="newsGrid" class="news-grid reveal"></div>
+        <noscript>
+          <p class="news-empty">Activez JavaScript pour afficher les actualités.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- Comment ça se met à jour -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Sous le capot</span>
+          <h2 class="section-title">Comment ce fil se met à jour</h2>
+          <p class="section-lede">Tout part d'un seul fichier, pensé pour être réécrit facilement — à la main ou par une automatisation.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Une source unique</h3>
+            <p>Les actualités vivent dans <code>assets/data/news.js</code> — un simple tableau d'entrées.</p>
+          </div>
+          <div class="step reveal" data-delay="1">
+            <h3>Mise à jour</h3>
+            <p>On y ajoute les dernières nouvelles (à la main, ou via une automatisation Claude).</p>
+          </div>
+          <div class="step reveal" data-delay="2">
+            <h3>Publication</h3>
+            <p>Un commit + push, et GitHub Pages affiche la nouvelle version. Cette page se régénère seule.</p>
+          </div>
+        </div>
+        <div class="callout reveal">
+          <span class="c-ico">🤖</span>
+          <div>
+            <h4>Pensé pour l'automatisation</h4>
+            <p>Le fichier de données est volontairement minimal pour qu'un agent (Claude Code, une routine planifiée ou une GitHub Action) puisse le régénérer. Les options sont détaillées dans <code>NEWS.md</code> à la racine du dépôt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand" style="color:#fff;">ClaudeTools</span>
+          <p>Un guide indépendant et accessible aux débutants sur la famille d'outils Claude. Sans affiliation avec Anthropic.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <a href="claude.html">Claude</a>
+          <a href="cowork.html">Cowork</a>
+          <a href="code.html">Code</a>
+          <a href="connectors.html">Connecteurs</a>
+          <a href="skills.html">Skills</a>
+          <a href="news.html">Actualités</a>
+        </div>
+        <div class="footer-col">
+          <h4>En savoir plus</h4>
+          <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>
+          <a href="https://docs.anthropic.com" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ClaudeTools — un projet éducatif.</span>
+        <span>Réalisé avec la palette de couleurs Claude 🎨</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data/news.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
