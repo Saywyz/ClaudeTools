@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClaudeTools — Découvrez Claude, Cowork, Code, Connecteurs & Skills</title>
+  <meta name="description" content="Un guide visuel et pour débutants de l'univers Claude : l'assistant, Cowork, Code, les Connecteurs et les Skills." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d97757'%3E%3Cpath d='M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ===== En-tête ===== -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+        </span>
+        ClaudeTools
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="claude.html">Claude</a>
+        <a href="cowork.html">Cowork</a>
+        <a href="code.html">Code</a>
+        <a href="connectors.html">Connecteurs</a>
+        <a href="skills.html">Skills</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <span class="blob blob--1"></span>
+      <span class="blob blob--2"></span>
+      <div class="container hero-grid">
+        <div class="reveal in">
+          <span class="eyebrow">✦ Le guide pour débuter en douceur</span>
+          <h1>Voici <span class="accent">Claude</span>, votre partenaire de réflexion.</h1>
+          <p class="hero-lede">Claude est une IA créée par Anthropic à qui vous pouvez parler, déléguer des tâches et même coder. Ce site explique, en langage simple et visuel, tout ce que l'univers Claude peut faire pour vous.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="claude.html">Commencer la visite
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#produits">Voir les outils</a>
+          </div>
+        </div>
+
+        <!-- Démo de chat -->
+        <div class="chat-demo reveal in" data-delay="1" aria-hidden="true">
+          <div class="chat-topbar">
+            <span class="chat-dot"></span><span class="chat-dot"></span><span class="chat-dot"></span>
+            <span class="chat-title">claude.ai</span>
+          </div>
+          <div class="bubble bubble--user" id="userBubble">
+            <span id="typeTarget" data-phrases='["Explique-moi l’informatique quantique simplement.","Planifie 3 jours à Lisbonne.","Résume ce rapport de 40 pages.","Aide-moi à corriger mon script Python."]'></span><span class="typing-cursor"></span>
+          </div>
+          <div class="bubble bubble--ai">
+            <span class="who">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z"/></svg>
+              Claude
+            </span>
+            Avec plaisir ! Voici une réponse claire, étape par étape, prête à l'emploi…
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Produits ===== -->
+    <section class="section section--alt" id="produits">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Trois outils, un seul Claude</span>
+          <h2 class="section-title">Choisissez l'expérience qui vous correspond</h2>
+          <p class="section-lede">La même intelligence en dessous — trois façons différentes de la mettre au travail.</p>
+        </div>
+
+        <div class="product-grid">
+          <!-- Claude -->
+          <a class="product-card reveal" href="claude.html" style="--card-accent:var(--claude);--card-tint:#fbf0ea;">
+            <div class="product-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.6-.8L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+            </div>
+            <h3>Claude</h3>
+            <p>L'assistant conversationnel. Posez des questions, rédigez, analysez documents et images, et réfléchissez — dans une simple discussion.</p>
+            <span class="card-link">Découvrir Claude
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <!-- Cowork -->
+          <a class="product-card reveal" data-delay="1" href="cowork.html" style="--card-accent:var(--cowork);--card-tint:#efe4d6;">
+            <div class="product-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Claude Cowork</h3>
+            <p>Votre coéquipier IA. Confiez une tâche complète à Claude : il déroule les étapes pour vous — recherche, rédaction et organisation à travers vos outils.</p>
+            <span class="card-link">Découvrir Cowork
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <!-- Code -->
+          <a class="product-card reveal" data-delay="2" href="code.html" style="--card-accent:var(--code);--card-tint:#e3eadb;">
+            <div class="product-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Claude Code</h3>
+            <p>Le compagnon des développeurs. Claude vit dans votre terminal et votre éditeur pour lire, écrire et corriger du vrai code sur tout votre projet.</p>
+            <span class="card-link">Découvrir Code
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Et aussi : Connecteurs + Skills -->
+        <div class="duo-grid">
+          <a class="product-card reveal" href="connectors.html" style="--card-accent:#6a93b9;--card-tint:#e2ecf3;">
+            <div class="product-icon" style="background:#e2ecf3;color:#3f5d75;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+            </div>
+            <h3>Connecteurs</h3>
+            <p>Branchez Claude sur vos applis — Gmail, Drive, Notion, Slack… — pour qu'il agisse directement sur vos données, avec votre accord.</p>
+            <span class="card-link" style="color:#3f5d75;">Découvrir les Connecteurs
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a class="product-card reveal" data-delay="1" href="skills.html" style="--card-accent:#9a7bb5;--card-tint:#ece4f3;">
+            <div class="product-icon" style="background:#ece4f3;color:#6b4f87;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>
+            </div>
+            <h3>Skills</h3>
+            <p>Des super-pouvoirs prêts à l'emploi : créer un PowerPoint, un Excel, suivre une charte… Claude apprend une compétence et l'applique tout seul.</p>
+            <span class="card-link" style="color:#6b4f87;">Découvrir les Skills
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Le moment wahou ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Le moment « wahou »</span>
+          <h2 class="section-title">Quelques exemples qui surprennent</h2>
+          <p class="section-lede">Des choses très concrètes que beaucoup ne soupçonnent pas. À gauche ce que vous demandez, à droite ce que Claude rend.</p>
+        </div>
+        <div class="wow-grid">
+          <div class="wow-card reveal">
+            <div class="wow-emoji">📸</div>
+            <h3>Une photo de votre frigo → un dîner</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Voici une photo de mon frigo. Qu'est-ce que je peux cuisiner ce soir ? »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude</b>« Avec ces œufs, courgettes et feta : une frittata en 15 min. Voici la recette… »</div>
+            </div>
+          </div>
+
+          <div class="wow-card reveal" data-delay="1">
+            <div class="wow-emoji">📑</div>
+            <h3>Un contrat de 60 pages → les pièges</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Lis ce bail et signale-moi les clauses inhabituelles ou risquées. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude</b>« 3 points à surveiller : préavis de 3 mois (clause 7), frais de remise en état flous (clause 12)… »</div>
+            </div>
+          </div>
+
+          <div class="wow-card reveal" data-delay="2">
+            <div class="wow-emoji">📊</div>
+            <h3>Un tableau brut → un graphique clair</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Transforme ces ventes en graphique interactif que je peux explorer. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude</b>« Voici un graphique interactif (Artéfact) : pic en juillet, ‑12 % en août… »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Ce que Claude sait faire ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Les bases</span>
+          <h2 class="section-title">Ce que Claude sait faire au quotidien</h2>
+          <p class="section-lede">Quelques super-pouvoirs simples — aucune compétence technique requise.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="feature-ico">💬</div>
+            <h3>Répondre & expliquer</h3>
+            <p>Des réponses claires à presque tout, au niveau de détail que vous choisissez.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico">✍️</div>
+            <h3>Rédiger & réécrire</h3>
+            <p>E-mails, articles, posts, scripts — rédigés, corrigés et ajustés à votre ton.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico">📄</div>
+            <h3>Lire des documents</h3>
+            <p>Déposez un PDF ou un rapport et obtenez un résumé, les points clés ou des réponses.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature-ico">🖼️</div>
+            <h3>Comprendre les images</h3>
+            <p>Montrez une photo, un graphique ou une capture et demandez ce que ça signifie.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico">🧠</div>
+            <h3>Réfléchir avec vous</h3>
+            <p>Élaborer des plans, comparer des options et raisonner étape par étape.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico">💻</div>
+            <h3>Aider à coder</h3>
+            <p>Expliquer, écrire et corriger du code — du premier script à l'application complète.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Comparatif ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Comparatif express</span>
+          <h2 class="section-title">Lequel utiliser ?</h2>
+          <p class="section-lede">Un petit aide-mémoire pour vous orienter en un coup d'œil.</p>
+        </div>
+        <div class="compare-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>Si vous voulez…</th>
+                <th>Utilisez</th>
+                <th>Où ça vit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Discuter, demander, rédiger, apprendre</td>
+                <td><span class="tag tag--claude">Claude</span></td>
+                <td>Web, mobile & ordinateur</td>
+              </tr>
+              <tr>
+                <td>Déléguer une tâche entière en plusieurs étapes</td>
+                <td><span class="tag tag--cowork">Cowork</span></td>
+                <td>Un espace de travail partagé</td>
+              </tr>
+              <tr>
+                <td>Construire et corriger des logiciels</td>
+                <td><span class="tag tag--code">Code</span></td>
+                <td>Votre terminal & éditeur</td>
+              </tr>
+              <tr>
+                <td>Connecter Claude à vos applications</td>
+                <td><span class="tag" style="background:#e2ecf3;color:#3f5d75;">Connecteurs</span></td>
+                <td>Dans Claude & Cowork</td>
+              </tr>
+              <tr>
+                <td>Ajouter une compétence prête à l'emploi</td>
+                <td><span class="tag" style="background:#ece4f3;color:#6b4f87;">Skills</span></td>
+                <td>Partout dans l'univers Claude</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Prêt à vous lancer ?</h2>
+          <p>Commencez par l'outil qui correspond à ce que vous voulez faire aujourd'hui. Chaque page est courte, visuelle et pensée pour les débutants.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn--primary" href="claude.html">Explorer Claude</a>
+            <a class="btn btn--ghost" href="code.html">Explorer Claude Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pied de page ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">
+            <span class="brand-mark" style="animation:none;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+            </span>
+            ClaudeTools
+          </span>
+          <p>Un guide indépendant et accessible aux débutants sur la famille d'outils Claude. Sans affiliation avec Anthropic.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <a href="claude.html">Claude</a>
+          <a href="cowork.html">Cowork</a>
+          <a href="code.html">Code</a>
+          <a href="connectors.html">Connecteurs</a>
+          <a href="skills.html">Skills</a>
+        </div>
+        <div class="footer-col">
+          <h4>En savoir plus</h4>
+          <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>
+          <a href="https://docs.anthropic.com" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ClaudeTools — un projet éducatif.</span>
+        <span>Réalisé avec la palette de couleurs Claude 🎨</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Code — Le compagnon des développeurs | ClaudeTools</title>
+  <meta name="description" content="Claude Code expliqué aux débutants : une IA qui lit, écrit et corrige du vrai code dans votre terminal et votre éditeur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d97757'%3E%3Cpath d='M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+        </span>
+        ClaudeTools
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="claude.html">Claude</a>
+        <a href="cowork.html">Cowork</a>
+        <a href="code.html">Code</a>
+        <a href="connectors.html">Connecteurs</a>
+        <a href="skills.html">Skills</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <span class="blob blob--1" style="background:#e3eadb;"></span>
+      <div class="container hero-grid">
+        <div class="reveal in">
+          <span class="eyebrow" style="background:#e3eadb;border-color:#d2ddc6;color:#57663f;">💻 Le compagnon des développeurs</span>
+          <h1>Claude, directement dans votre code.</h1>
+          <p class="hero-lede">Claude Code est une version de Claude qui travaille dans votre terminal et votre éditeur. Il lit tout votre projet, écrit des fonctionnalités, corrige des bugs et explique le code — en agissant réellement, pas seulement en décrivant.</p>
+          <div class="pill-row">
+            <span class="pill"><span class="dot" style="background:var(--code);"></span> Comprend votre projet</span>
+            <span class="pill"><span class="dot" style="background:var(--code);"></span> Modifie de vrais fichiers</span>
+            <span class="pill"><span class="dot" style="background:var(--code);"></span> Exécute des commandes</span>
+          </div>
+        </div>
+
+        <!-- Terminal -->
+        <div class="terminal reveal in" data-delay="1" aria-hidden="true">
+          <div class="terminal-bar">
+            <span class="chat-dot"></span><span class="chat-dot"></span><span class="chat-dot"></span>
+            <span class="chat-title">claude — terminal du projet</span>
+          </div>
+          <div class="terminal-body">
+            <div class="line"><span class="t-prompt">›</span> <span class="t-cmd">Ajoute un bouton mode sombre dans la barre de nav</span></div>
+            <div class="line"><span class="t-muted">⎿ lecture de components/Navbar.jsx …</span></div>
+            <div class="line"><span class="t-muted">⎿ modification de 2 fichiers, création de useTheme.js</span></div>
+            <div class="line"><span class="t-ok">✔ Terminé.</span> <span class="t-cmd">Bouton ajouté, il retient votre choix.</span></div>
+            <div class="line"><span class="t-accent">→ Lancez l'appli pour voir le résultat.</span></div>
+            <div class="line"><span class="t-prompt">›</span> <span class="terminal-cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sous-navigation -->
+    <nav class="subnav">
+      <div class="container subnav-inner">
+        <a href="#pouvoirs">Super-pouvoirs</a>
+        <a href="#exemples">Exemples</a>
+        <a href="#public">Pour qui</a>
+        <a href="#session">Une session type</a>
+        <a href="#securite">Sécurité</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </nav>
+
+    <!-- Super-pouvoirs -->
+    <section class="section section--alt jump" id="pouvoirs">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e3eadb;border-color:#d2ddc6;color:#57663f;">Super-pouvoirs</span>
+          <h2 class="section-title">Bien plus que de l'autocomplétion</h2>
+          <p class="section-lede">La plupart des outils suggèrent une ligne. Claude Code prend en charge des tâches entières.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">🧭</div>
+            <h3>Lit tout le projet</h3>
+            <p>Il explore vos fichiers pour comprendre le contexte avant d'agir.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">🛠️</div>
+            <h3>Crée des fonctionnalités</h3>
+            <p>Décrivez ce que vous voulez ; il écrit et relie le code entre les fichiers.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">🐛</div>
+            <h3>Corrige les bugs</h3>
+            <p>Collez une erreur : il en trouve la cause, puis propose un correctif.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">📖</div>
+            <h3>Explique le code</h3>
+            <p>« Que fait ce fichier ? » — parfait pour apprivoiser un projet inconnu.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">⚡</div>
+            <h3>Exécute des commandes</h3>
+            <p>Il lance les tests, installe des paquets et utilise git — avec votre accord.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">🎚️</div>
+            <h3>Règle son effort</h3>
+            <p>Augmentez le niveau d'<strong>effort</strong> pour qu'il réfléchisse plus longtemps aux problèmes ardus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exemples wahou -->
+    <section class="section jump" id="exemples">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e3eadb;border-color:#d2ddc6;color:#57663f;">Le moment « wahou »</span>
+          <h2 class="section-title">Une phrase, du code qui tourne</h2>
+          <p class="section-lede">Même sans être expert, ces demandes simples produisent des résultats concrets.</p>
+        </div>
+        <div class="wow-grid">
+          <div class="wow-card reveal">
+            <div class="wow-emoji">🌐</div>
+            <h3>Un site en une phrase</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Crée une page portfolio avec mon nom, 3 projets et un formulaire de contact. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude Code</b>« Page créée, style appliqué, formulaire fonctionnel. Lancez l'aperçu. »</div>
+            </div>
+          </div>
+          <div class="wow-card reveal" data-delay="1">
+            <div class="wow-emoji">🔧</div>
+            <h3>Le bug mystère résolu</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Mon appli plante au démarrage, voici l'erreur. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude Code</b>« Cause trouvée : une variable manquante ligne 42. Correctif appliqué, ça redémarre. »</div>
+            </div>
+          </div>
+          <div class="wow-card reveal" data-delay="2">
+            <div class="wow-emoji">🧹</div>
+            <h3>Le grand ménage</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Renomme cette fonction partout et ajoute des tests. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude Code</b>« 14 fichiers mis à jour, 6 tests ajoutés, tout passe au vert. »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pour qui -->
+    <section class="section section--alt jump" id="public">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e3eadb;border-color:#d2ddc6;color:#57663f;">Pour qui</span>
+          <h2 class="section-title">Utile à tous les niveaux</h2>
+        </div>
+        <div class="showcase">
+          <div class="use-card reveal">
+            <div class="use-emoji">🌱</div>
+            <h3>Grands débutants</h3>
+            <p>Apprenez en faisant — demandez à Claude de construire et d'expliquer chaque partie.</p>
+          </div>
+          <div class="use-card reveal" data-delay="1">
+            <div class="use-emoji">🚀</div>
+            <h3>Bricoleurs & créateurs</h3>
+            <p>Transformez une idée de week-end en appli qui marche, sans bloquer sur la config.</p>
+          </div>
+          <div class="use-card reveal" data-delay="2">
+            <div class="use-emoji">🏢</div>
+            <h3>Développeurs pros</h3>
+            <p>Avancez plus vite sur de vrais projets — refactos, tests et changements fastidieux.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session type -->
+    <section class="section jump" id="session">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e3eadb;border-color:#d2ddc6;color:#57663f;">Une session type</span>
+          <h2 class="section-title">À quoi ressemble le travail avec lui</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal" style="--accent:var(--code);">
+            <h3>Ouvrez le projet</h3>
+            <p>Lancez Claude Code dans le dossier sur lequel vous travaillez. Il voit vos fichiers.</p>
+          </div>
+          <div class="step reveal" data-delay="1">
+            <h3>Dites ce que vous voulez</h3>
+            <p>En français : « ajoute une connexion », « corrige cette erreur », « écris des tests ».</p>
+          </div>
+          <div class="step reveal" data-delay="2">
+            <h3>Validez les changements</h3>
+            <p>Claude montre ce qu'il va modifier ou exécuter. Vous confirmez avant qu'il agisse.</p>
+          </div>
+          <div class="step reveal" data-delay="3">
+            <h3>Testez & affinez</h3>
+            <p>Lancez, donnez votre avis, et bouclez jusqu'à ce que ça marche comme prévu.</p>
+          </div>
+        </div>
+        <div class="callout reveal">
+          <span class="c-ico">🧩</span>
+          <div>
+            <h4>Claude Code adore les Skills</h4>
+            <p>Les <a href="skills.html" style="color:var(--accent-dark);font-weight:600;">Skills</a> ajoutent des compétences réutilisables (revue de code, génération de docs…) que Claude Code charge tout seul quand c'est utile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sécurité -->
+    <section class="section section--alt jump" id="securite">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e3eadb;border-color:#d2ddc6;color:#57663f;">Garde-fous intégrés</span>
+          <h2 class="section-title">On peut le laisser travailler en confiance</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">✅</div>
+            <h3>Demande la permission</h3>
+            <p>Il sollicite votre accord avant de modifier des fichiers ou lancer des commandes.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">📜</div>
+            <h3>Montre son travail</h3>
+            <p>Chaque changement est visible : vous savez toujours ce qui s'est passé.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico" style="background:#e3eadb;color:#57663f;">↩️</div>
+            <h3>Compatible avec git</h3>
+            <p>Avec le contrôle de version, les changements se relisent et s'annulent facilement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section jump" id="faq">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e3eadb;border-color:#d2ddc6;color:#57663f;">Bon à savoir</span>
+          <h2 class="section-title">Questions fréquentes</h2>
+        </div>
+        <div class="faq reveal">
+          <div class="faq-item">
+            <button class="faq-q">Faut-il savoir coder ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Ça aide, mais on peut débuter de zéro. Beaucoup utilisent Claude Code pour apprendre — en construisant de petites choses et en lui demandant d'expliquer au passage.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Où s'exécute-t-il ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Dans votre terminal (l'outil en ligne de commande de votre ordinateur) et dans des éditeurs populaires comme VS Code, donc juste à côté de votre projet.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Va-t-il modifier mes fichiers sans demander ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Non. Il propose les changements et demande confirmation avant de modifier des fichiers ou d'exécuter des commandes : vous gardez le contrôle.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Quelle différence avec discuter avec Claude ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Le <a href="claude.html" style="color:var(--accent-dark);font-weight:600;">Claude</a> classique parle du code. Claude Code ouvre vraiment votre projet, fait les modifications et exécute les choses pour vous.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal" style="background:linear-gradient(135deg,#7d8b74,#57663f);">
+          <h2>Voilà toute la famille</h2>
+          <p>Claude pour discuter, Cowork pour déléguer, Code pour construire — et les Connecteurs et Skills pour démultiplier le tout.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn--primary" href="skills.html" style="color:#57663f;">Découvrir les Skills</a>
+            <a class="btn btn--ghost" href="index.html">Retour à l'accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">
+            <span class="brand-mark" style="animation:none;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+            </span>
+            ClaudeTools
+          </span>
+          <p>Un guide indépendant et accessible aux débutants sur la famille d'outils Claude. Sans affiliation avec Anthropic.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <a href="claude.html">Claude</a>
+          <a href="cowork.html">Cowork</a>
+          <a href="code.html">Code</a>
+          <a href="connectors.html">Connecteurs</a>
+          <a href="skills.html">Skills</a>
+        </div>
+        <div class="footer-col">
+          <h4>En savoir plus</h4>
+          <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>
+          <a href="https://docs.anthropic.com" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ClaudeTools — un projet éducatif.</span>
+        <span>Réalisé avec la palette de couleurs Claude 🎨</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

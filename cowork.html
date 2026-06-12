@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Cowork — Votre coéquipier IA | ClaudeTools</title>
+  <meta name="description" content="Claude Cowork expliqué aux débutants : confiez une tâche entière à Claude et laissez-le dérouler les étapes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d97757'%3E%3Cpath d='M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+        </span>
+        ClaudeTools
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="claude.html">Claude</a>
+        <a href="cowork.html">Cowork</a>
+        <a href="code.html">Code</a>
+        <a href="connectors.html">Connecteurs</a>
+        <a href="skills.html">Skills</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <span class="blob blob--1" style="background:#efe4d6;"></span>
+      <div class="container reveal in">
+        <span class="eyebrow" style="background:#efe4d6;border-color:#e3d3bf;color:#8a6033;">👥 Votre coéquipier IA</span>
+        <h1>Ne demandez plus — déléguez la tâche entière.</h1>
+        <p class="hero-lede">Claude Cowork, c'est comme avoir un collègue compétent. Au lieu d'un échange question-réponse, vous confiez un travail complet — « fais cette recherche », « rédige ça », « organise ces éléments » — et Claude déroule les étapes avant de vous apporter le résultat.</p>
+        <div class="pill-row">
+          <span class="pill"><span class="dot" style="background:var(--cowork);"></span> Gère les tâches multi-étapes</span>
+          <span class="pill"><span class="dot" style="background:var(--cowork);"></span> Vous gardez le contrôle</span>
+          <span class="pill"><span class="dot" style="background:var(--cowork);"></span> Se branche à vos outils</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chat vs Cowork -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#efe4d6;border-color:#e3d3bf;color:#8a6033;">L'idée clé</span>
+          <h2 class="section-title">Discuter ou coopérer</h2>
+          <p class="section-lede">Le même Claude — un autre niveau d'aide.</p>
+        </div>
+        <div class="tab-card reveal" style="margin-top:48px;">
+          <div>
+            <h3 style="color:var(--claude);">💬 Avec Claude (chat)</h3>
+            <p style="margin-bottom:8px;">Vous pilotez chaque étape.</p>
+            <ul class="check">
+              <li>Vous demandez une chose à la fois</li>
+              <li>Vous copiez les résultats là où il faut</li>
+              <li>Parfait pour les réponses et brouillons rapides</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="color:var(--cowork);">👥 Avec Cowork (coéquipier)</h3>
+            <p style="margin-bottom:8px;">Claude pilote les étapes pour vous.</p>
+            <ul class="check">
+              <li>Vous décrivez l'objectif final une fois</li>
+              <li>Claude planifie et déroule les parties</li>
+              <li>Parfait pour les projets en plusieurs étapes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#efe4d6;border-color:#e3d3bf;color:#8a6033;">Comment ça marche</span>
+          <h2 class="section-title">De la demande au résultat</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal" style="--accent:var(--cowork);">
+            <h3>Décrivez l'objectif</h3>
+            <p>Dites à Claude à quoi ressemble « terminé » — le résultat, pas chaque instruction.</p>
+          </div>
+          <div class="step reveal" data-delay="1">
+            <h3>Claude planifie</h3>
+            <p>Il découpe le travail en étapes et se met à l'œuvre, en vous consultant si besoin.</p>
+          </div>
+          <div class="step reveal" data-delay="2">
+            <h3>Il fait le travail</h3>
+            <p>Recherche, rédaction et organisation à travers les outils que vous connectez.</p>
+          </div>
+          <div class="step reveal" data-delay="3">
+            <h3>Vous validez</h3>
+            <p>Vous recevez un résultat fini à approuver, ajuster ou renvoyer pour modification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Le moment wahou -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#efe4d6;border-color:#e3d3bf;color:#8a6033;">Le moment « wahou »</span>
+          <h2 class="section-title">Une phrase le matin, un dossier prêt à midi</h2>
+          <p class="section-lede">Des missions concrètes que l'on confie à Cowork. À gauche votre demande, à droite ce qu'il vous rend.</p>
+        </div>
+        <div class="wow-grid">
+          <div class="wow-card reveal">
+            <div class="wow-emoji">🏠</div>
+            <h3>La recherche d'appartement</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Compare ces 8 annonces, calcule le coût réel par mois et classe-les. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Cowork</b>« Tableau comparatif prêt : charges incluses, score transport, top 3 surligné. »</div>
+            </div>
+          </div>
+          <div class="wow-card reveal" data-delay="1">
+            <div class="wow-emoji">🎤</div>
+            <h3>La conférence à préparer</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Trouve 10 intervenants pertinents sur l'IA et rédige un message d'invitation pour chacun. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Cowork</b>« 10 fiches + 10 invitations personnalisées, prêtes à relire et envoyer. »</div>
+            </div>
+          </div>
+          <div class="wow-card reveal" data-delay="2">
+            <div class="wow-emoji">📈</div>
+            <h3>Le bilan trimestriel</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« À partir de ces 3 fichiers de ventes, fais-moi une synthèse avec les tendances. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Cowork</b>« Rapport structuré : +18 % au T3, alerte sur la région Sud, 4 recommandations. »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cas d'usage -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#efe4d6;border-color:#e3d3bf;color:#8a6033;">Quoi déléguer</span>
+          <h2 class="section-title">Les tâches qu'on confie à Cowork</h2>
+          <p class="section-lede">Tout ce qui comporte plusieurs étapes est un bon candidat.</p>
+        </div>
+        <div class="showcase">
+          <div class="use-card reveal">
+            <div class="use-emoji">🔎</div>
+            <h3>Faire une recherche</h3>
+            <p>« Compare ces cinq options et donne-moi une recommandation sourcée. »</p>
+          </div>
+          <div class="use-card reveal" data-delay="1">
+            <div class="use-emoji">📊</div>
+            <h3>Bâtir un rapport</h3>
+            <p>« Transforme ces données en synthèse claire avec les tendances clés. »</p>
+          </div>
+          <div class="use-card reveal" data-delay="2">
+            <div class="use-emoji">🗂️</div>
+            <h3>Organiser l'information</h3>
+            <p>« Range ces notes par thèmes et propose-moi un plan présentable. »</p>
+          </div>
+          <div class="use-card reveal">
+            <div class="use-emoji">✉️</div>
+            <h3>Préparer une prospection</h3>
+            <p>« Rédige une intro personnalisée pour chaque contact de cette liste. »</p>
+          </div>
+          <div class="use-card reveal" data-delay="1">
+            <div class="use-emoji">📅</div>
+            <h3>Planifier un événement</h3>
+            <p>« Monte un planning, une check-list et un budget pour un séminaire. »</p>
+          </div>
+          <div class="use-card reveal" data-delay="2">
+            <div class="use-emoji">📝</div>
+            <h3>Rédiger du contenu</h3>
+            <p>« Écris un premier jet de cet article, puis une version courte pour les réseaux. »</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confiance / contrôle -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#efe4d6;border-color:#e3d3bf;color:#8a6033;">Sérénité</span>
+          <h2 class="section-title">C'est toujours vous aux commandes</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="feature-ico" style="background:#efe4d6;color:#8a6033;">👀</div>
+            <h3>Étapes transparentes</h3>
+            <p>Vous voyez ce que Claude fait, et pourquoi, au fur et à mesure.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico" style="background:#efe4d6;color:#8a6033;">✋</div>
+            <h3>Points de validation</h3>
+            <p>Claude vous consulte avant toute action importante ou irréversible.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico" style="background:#efe4d6;color:#8a6033;">🔌</div>
+            <h3>Vos outils, vos règles</h3>
+            <p>Il ne touche qu'aux applis et données que vous choisissez de connecter.</p>
+          </div>
+        </div>
+        <div class="callout reveal" style="background:#efe4d6;border-color:#e3d3bf;">
+          <span class="c-ico">🔌</span>
+          <div>
+            <h4>Cowork brille avec les Connecteurs</h4>
+            <p>En branchant Gmail, Drive, Notion ou votre agenda, Claude travaille directement dans vos vrais outils. <a href="connectors.html" style="color:#8a6033;font-weight:600;">Voir les Connecteurs →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#efe4d6;border-color:#e3d3bf;color:#8a6033;">Bon à savoir</span>
+          <h2 class="section-title">Questions fréquentes</h2>
+        </div>
+        <div class="faq reveal">
+          <div class="faq-item">
+            <button class="faq-q">En quoi est-ce différent d'un simple chat ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Dans le chat, vous guidez chaque étape. Avec Cowork, vous décrivez l'objectif une fois et Claude réalise le travail en plusieurs étapes, puis vous apporte un résultat fini à relire.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Va-t-il agir sans me demander ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Pas de mauvaise surprise. Claude marque une pause pour votre validation avant toute action importante, et vous pouvez l'arrêter ou le réorienter à tout moment.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Faut-il être technique ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Pas du tout. Vous décrivez ce que vous voulez en langage courant, comme si vous parliez à un collègue serviable.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Quelles tâches conviennent le mieux ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Tout ce qui comporte plusieurs étapes — recherche, rapports, organisation, rédaction et préparation. Si cela vous prendrait quelques heures concentrées, c'est un bon candidat.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal" style="background:linear-gradient(135deg,#b9876a,#8a6033);">
+          <h2>Pour les bâtisseurs : Claude Code</h2>
+          <p>Si votre « tâche » est un logiciel, il existe une version de Claude qui vit directement dans votre code.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn--primary" href="code.html" style="color:#8a6033;">Explorer Claude Code</a>
+            <a class="btn btn--ghost" href="index.html">Retour à l'accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">
+            <span class="brand-mark" style="animation:none;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+            </span>
+            ClaudeTools
+          </span>
+          <p>Un guide indépendant et accessible aux débutants sur la famille d'outils Claude. Sans affiliation avec Anthropic.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <a href="claude.html">Claude</a>
+          <a href="cowork.html">Cowork</a>
+          <a href="code.html">Code</a>
+          <a href="connectors.html">Connecteurs</a>
+          <a href="skills.html">Skills</a>
+        </div>
+        <div class="footer-col">
+          <h4>En savoir plus</h4>
+          <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>
+          <a href="https://docs.anthropic.com" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ClaudeTools — un projet éducatif.</span>
+        <span>Réalisé avec la palette de couleurs Claude 🎨</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

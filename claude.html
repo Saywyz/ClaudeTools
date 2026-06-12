@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude — L'assistant conversationnel | ClaudeTools</title>
+  <meta name="description" content="Ce qu'est Claude et tout ce qu'il sait faire : projets, recherche approfondie, réflexion étendue, artéfacts et vision — expliqués simplement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d97757'%3E%3Cpath d='M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+        </span>
+        ClaudeTools
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="claude.html">Claude</a>
+        <a href="cowork.html">Cowork</a>
+        <a href="code.html">Code</a>
+        <a href="connectors.html">Connecteurs</a>
+        <a href="skills.html">Skills</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <span class="blob blob--1"></span>
+      <div class="container reveal in">
+        <span class="eyebrow">💬 L'assistant conversationnel</span>
+        <h1>Claude, à une conversation de votre prochaine idée.</h1>
+        <p class="hero-lede">Au plus simple, Claude est une fenêtre de discussion : vous écrivez, il répond avec justesse. Derrière cette simplicité se cache un assistant qui rédige, analyse, raisonne et comprend les images — en langage naturel.</p>
+        <div class="pill-row">
+          <span class="pill"><span class="dot"></span> Aucune installation</span>
+          <span class="pill"><span class="dot"></span> Direct dans le navigateur</span>
+          <span class="pill"><span class="dot"></span> Se souvient de la discussion</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sous-navigation -->
+    <nav class="subnav">
+      <div class="container subnav-inner">
+        <a href="#bases">Les bases</a>
+        <a href="#projets">Projets</a>
+        <a href="#recherche">Recherche approfondie</a>
+        <a href="#effort">Réflexion étendue</a>
+        <a href="#artefacts">Artéfacts</a>
+        <a href="#vision">Vision & voix</a>
+        <a href="#wahou">Exemples</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </nav>
+
+    <!-- Les bases -->
+    <section class="section section--alt jump" id="bases">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Ce qu'il fait de mieux</span>
+          <h2 class="section-title">Les usages du quotidien</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="feature-ico">✍️</div>
+            <h3>Rédaction</h3>
+            <p>E-mails, articles, posts, résumés, histoires — dans le ton qui vous plaît.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico">📚</div>
+            <h3>Apprendre</h3>
+            <p>Demandez « explique comme à un enfant de 10 ans » ou un niveau expert. À vous de choisir.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico">📄</div>
+            <h3>Documents</h3>
+            <p>Importez un PDF ou collez du texte : résumés, réponses et points clés.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature-ico">🖼️</div>
+            <h3>Images</h3>
+            <p>Partagez une photo, un graphique ou une capture, et demandez à Claude de la lire.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico">🧩</div>
+            <h3>Résolution</h3>
+            <p>Décortiquer des décisions, peser le pour et le contre, planifier étape par étape.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico">🌍</div>
+            <h3>Langues</h3>
+            <p>Traduire, pratiquer et écrire couramment dans des dizaines de langues.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalités en profondeur -->
+    <section class="section jump" id="projets">
+      <div class="container">
+        <div class="center reveal" style="margin-bottom:8px;">
+          <span class="eyebrow">Les fonctionnalités phares</span>
+          <h2 class="section-title">Bien plus qu'un simple chat</h2>
+          <p class="section-lede">Quatre fonctionnalités qui changent tout une fois qu'on les connaît.</p>
+        </div>
+
+        <!-- Projets -->
+        <div class="split reveal" style="margin-top:64px;">
+          <div class="split-text">
+            <span class="mini-eyebrow">📂 Projets</span>
+            <h3>Un espace dédié qui se souvient de tout</h3>
+            <p>Un <strong>Projet</strong> regroupe vos documents, vos consignes et toutes vos discussions au même endroit. Claude garde le contexte en mémoire : plus besoin de tout réexpliquer à chaque fois.</p>
+            <ul class="check">
+              <li>Importez vos fichiers de référence une seule fois</li>
+              <li>Donnez des instructions permanentes (ton, format…)</li>
+              <li>Idéal pour un travail qui dure plusieurs semaines</li>
+            </ul>
+          </div>
+          <div class="split-media">
+            <div class="mock-window">
+              <div class="mock-bar">📂 Projet — Lancement produit</div>
+              <div class="mock-body">
+                <div class="file-row"><span class="ic">📄</span> cahier-des-charges.pdf</div>
+                <div class="file-row"><span class="ic">📊</span> budget-2026.xlsx</div>
+                <div class="file-row"><span class="ic">📝</span> ton-de-marque.txt</div>
+                <div class="bubble bubble--ai" style="margin-top:14px;"><span class="who"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z"/></svg>Claude</span>Je connais déjà votre budget et votre ton. On part sur quel sujet ?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recherche approfondie -->
+        <div class="split split--reverse reveal jump" id="recherche">
+          <div class="split-text">
+            <span class="mini-eyebrow">🔬 Recherche approfondie</span>
+            <h3>Un véritable rapport, sources à l'appui</h3>
+            <p>Avec la <strong>Recherche approfondie</strong>, Claude part explorer le web (et vos sources connectées) en menant des dizaines de recherches, puis revient avec une synthèse structurée et <strong>citée</strong>. Parfait quand une seule réponse ne suffit pas.</p>
+            <ul class="check">
+              <li>Compare plusieurs sources automatiquement</li>
+              <li>Cite ses références pour que vous vérifiiez</li>
+              <li>Idéal pour un achat, une étude, une veille</li>
+            </ul>
+          </div>
+          <div class="split-media">
+            <div class="mock-window">
+              <div class="mock-bar">🔬 Recherche en cours…</div>
+              <div class="mock-body">
+                <div class="research-step"><span class="tick">✓</span> 23 sources analysées</div>
+                <div class="research-step"><span class="tick">✓</span> Comparaison des prix & avis</div>
+                <div class="research-step"><span class="tick">✓</span> Vérification des contradictions</div>
+                <div class="research-step"><span class="tick">…</span> Rédaction de la synthèse citée</div>
+                <div class="progress-track"><div class="progress-fill" style="width:78%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Réflexion étendue / effort -->
+        <div class="split reveal jump" id="effort">
+          <div class="split-text">
+            <span class="mini-eyebrow">🧠 Réflexion étendue (effort)</span>
+            <h3>Demandez-lui de réfléchir plus longtemps</h3>
+            <p>Pour les problèmes difficiles, vous pouvez augmenter le niveau d'<strong>effort</strong> : Claude prend le temps de raisonner, étape par étape, avant de répondre. Plus de réflexion = des réponses plus fiables sur les sujets complexes.</p>
+            <ul class="check">
+              <li>Effort léger pour les questions rapides</li>
+              <li>Effort élevé pour les calculs et la logique</li>
+              <li>Vous voyez son raisonnement se dérouler</li>
+            </ul>
+          </div>
+          <div class="split-media">
+            <div class="mock-window">
+              <div class="mock-bar">🧠 Niveau d'effort</div>
+              <div class="mock-body">
+                <div class="effort-row"><span class="lbl">Léger</span><span class="effort-bars"><i class="on"></i><i></i><i></i><i></i></span></div>
+                <div class="effort-row"><span class="lbl">Moyen</span><span class="effort-bars"><i class="on"></i><i class="on"></i><i></i><i></i></span></div>
+                <div class="effort-row"><span class="lbl">Élevé</span><span class="effort-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+                <div class="bubble bubble--ai" style="margin-top:6px;"><span class="who"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z"/></svg>Claude</span>Laisse-moi décomposer le problème… ① ② ③ → voici la réponse vérifiée.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artéfacts -->
+        <div class="split split--reverse reveal jump" id="artefacts">
+          <div class="split-text">
+            <span class="mini-eyebrow">✨ Artéfacts</span>
+            <h3>Des créations qui prennent vie à côté du chat</h3>
+            <p>Quand Claude produit du code, un document ou un mini-site, il l'ouvre dans un panneau <strong>Artéfact</strong> à droite. Vous le voyez, vous l'éditez, et certaines créations sont même <strong>interactives</strong> — un graphique, une calculatrice, un petit jeu.</p>
+            <ul class="check">
+              <li>Un aperçu en direct, pas seulement du texte</li>
+              <li>Modifiable d'un simple « rends-le plus coloré »</li>
+              <li>Copiable ou partageable en un clic</li>
+            </ul>
+          </div>
+          <div class="split-media">
+            <div class="mock-window">
+              <div class="mock-bar"><span class="chat-dot"></span><span class="chat-dot"></span><span class="chat-dot"></span> Artéfact — Tableau de bord</div>
+              <div class="mock-body" style="background:var(--bg-alt);">
+                <div style="display:flex;gap:8px;align-items:flex-end;height:90px;padding:8px;">
+                  <div style="flex:1;background:var(--accent-soft);height:40%;border-radius:6px 6px 0 0;"></div>
+                  <div style="flex:1;background:var(--accent);height:75%;border-radius:6px 6px 0 0;"></div>
+                  <div style="flex:1;background:var(--accent-soft);height:55%;border-radius:6px 6px 0 0;"></div>
+                  <div style="flex:1;background:var(--accent);height:95%;border-radius:6px 6px 0 0;"></div>
+                  <div style="flex:1;background:var(--accent-soft);height:60%;border-radius:6px 6px 0 0;"></div>
+                </div>
+                <div class="t-muted" style="font-family:var(--font-mono);font-size:12px;text-align:center;color:var(--text-muted);">Graphique interactif généré par Claude</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & voix -->
+    <section class="section section--alt jump" id="vision">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Au-delà du texte</span>
+          <h2 class="section-title">Claude voit, lit et vous écoute</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="feature-ico">📷</div>
+            <h3>Comprend les images</h3>
+            <p>Photos, captures d'écran, schémas, graphiques — décrits et expliqués.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico">📎</div>
+            <h3>Lit vos fichiers</h3>
+            <p>PDF, Word, Excel, présentations : posez vos questions sur leur contenu.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico">🎙️</div>
+            <h3>Mode vocal</h3>
+            <p>Parlez à Claude à voix haute, comme une conversation naturelle, sur mobile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exemples interactifs (onglets) -->
+    <section class="section jump" id="wahou">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">À l'usage</span>
+          <h2 class="section-title">Choisissez une tâche, voyez le ressenti</h2>
+          <p class="section-lede">Touchez un onglet pour explorer une façon courante d'utiliser Claude.</p>
+        </div>
+
+        <div class="tabs reveal" data-tabs>
+          <div class="tab-list">
+            <button class="tab-btn active" data-tab="write">Rédiger un e-mail</button>
+            <button class="tab-btn" data-tab="learn">Apprendre un sujet</button>
+            <button class="tab-btn" data-tab="doc">Résumer un PDF</button>
+          </div>
+
+          <div class="tab-panel active" data-panel="write">
+            <div class="tab-card">
+              <div>
+                <h3>De « ugh, les e-mails » à « c'est envoyé »</h3>
+                <p>Décrivez la situation en une phrase. Claude rédige un message soigné que vous pouvez ajuster.</p>
+                <ul class="check">
+                  <li>Réglez le ton : amical, formel ou ferme</li>
+                  <li>Demandez une version plus courte ou plus longue</li>
+                  <li>Répondez avec vos retours — il garde le contexte</li>
+                </ul>
+              </div>
+              <div class="tab-visual">
+                <div class="bubble bubble--user">Rédige un e-mail poli pour demander à mon propriétaire de réparer le chauffage.</div>
+                <div class="bubble bubble--ai"><span class="who"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z"/></svg>Claude</span>Objet : Demande de réparation du chauffage — Appt 4B. Bonjour M. Diaz, j'espère que vous allez bien…</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="learn">
+            <div class="tab-card">
+              <div>
+                <h3>Votre tuteur privé et patient</h3>
+                <p>Aucune question n'est trop simple. Claude part de votre niveau et construit à partir de là.</p>
+                <ul class="check">
+                  <li>« Explique simplement », puis « va plus loin »</li>
+                  <li>Demandez des exemples et des analogies</li>
+                  <li>Auto-évaluez-vous pour vérifier votre compréhension</li>
+                </ul>
+              </div>
+              <div class="tab-visual">
+                <div class="bubble bubble--user">Explique-moi les intérêts composés comme si je débutais avec l'argent.</div>
+                <div class="bubble bubble--ai"><span class="who"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z"/></svg>Claude</span>Imaginez une boule de neige qui dévale une pente — elle grossit de plus en plus vite…</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="doc">
+            <div class="tab-card">
+              <div>
+                <h3>Évitez les 40 pages indigestes</h3>
+                <p>Déposez un document et demandez exactement ce qu'il vous faut — sans tout lire.</p>
+                <ul class="check">
+                  <li>Obtenez un résumé d'un paragraphe</li>
+                  <li>Extrayez dates, chiffres ou actions à mener</li>
+                  <li>Posez des questions de suivi sur le contenu</li>
+                </ul>
+              </div>
+              <div class="tab-visual">
+                <div class="bubble bubble--user">📎 rapport.pdf — donne-moi les 5 points clés.</div>
+                <div class="bubble bubble--ai"><span class="who"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z"/></svg>Claude</span>Voici les 5 points : 1) Le chiffre d'affaires a progressé de 12 %… 2) Les coûts se concentrent sur…</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Astuces -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Astuces débutant</span>
+          <h2 class="section-title">De meilleures réponses, plus vite</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Donnez du contexte</h3>
+            <p>Dites pour qui c'est et pourquoi. Plus de contexte, meilleures réponses.</p>
+          </div>
+          <div class="step reveal" data-delay="1">
+            <h3>Faites refaire</h3>
+            <p>« Plus court », « plus décontracté », « ajoute un exemple » — continuez de répondre.</p>
+          </div>
+          <div class="step reveal" data-delay="2">
+            <h3>Montrez l'exemple</h3>
+            <p>Collez un exemple du style ou du format que Claude doit reproduire.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section jump" id="faq">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Bon à savoir</span>
+          <h2 class="section-title">Questions fréquentes</h2>
+        </div>
+        <div class="faq reveal">
+          <div class="faq-item">
+            <button class="faq-q">Dois-je installer quelque chose ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Non. Claude fonctionne directement dans votre navigateur sur claude.ai, avec aussi des applis mobile et ordinateur si vous préférez.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Claude se souvient-il de notre conversation ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Oui — au sein d'une même discussion, il retient tout ce que vous avez dit, pour affiner les réponses sans vous répéter. Avec les Projets, il garde aussi vos fichiers et consignes.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Peut-il se tromper ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Oui. Claude est très capable mais pas infaillible — vérifiez les faits importants, les chiffres et tout ce qui a des enjeux sérieux.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Quelle différence avec Cowork et Code ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Claude, c'est le chat. <a href="cowork.html" style="color:var(--accent-dark);font-weight:600;">Cowork</a> lui confie une tâche entière à réaliser, et <a href="code.html" style="color:var(--accent-dark);font-weight:600;">Code</a> travaille directement dans vos projets logiciels.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>La suite : votre coéquipier IA</h2>
+          <p>Quand discuter ne suffit plus et que vous voulez une tâche réalisée de bout en bout, place à Claude Cowork.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn--primary" href="cowork.html">Explorer Claude Cowork</a>
+            <a class="btn btn--ghost" href="connectors.html">Voir les Connecteurs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">
+            <span class="brand-mark" style="animation:none;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+            </span>
+            ClaudeTools
+          </span>
+          <p>Un guide indépendant et accessible aux débutants sur la famille d'outils Claude. Sans affiliation avec Anthropic.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <a href="claude.html">Claude</a>
+          <a href="cowork.html">Cowork</a>
+          <a href="code.html">Code</a>
+          <a href="connectors.html">Connecteurs</a>
+          <a href="skills.html">Skills</a>
+        </div>
+        <div class="footer-col">
+          <h4>En savoir plus</h4>
+          <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>
+          <a href="https://docs.anthropic.com" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ClaudeTools — un projet éducatif.</span>
+        <span>Réalisé avec la palette de couleurs Claude 🎨</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

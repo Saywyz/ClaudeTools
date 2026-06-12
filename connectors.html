@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connecteurs — Branchez Claude sur vos applis | ClaudeTools</title>
+  <meta name="description" content="Les Connecteurs expliqués aux débutants : reliez Claude à Gmail, Drive, Notion, Slack et bien plus, pour qu'il agisse sur vos données." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d97757'%3E%3Cpath d='M12 2l1.6 6.8L20 7l-4.2 5L20 17l-6.4-1.8L12 22l-1.6-6.8L4 17l4.2-5L4 7l6.4 1.8z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+        </span>
+        ClaudeTools
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="claude.html">Claude</a>
+        <a href="cowork.html">Cowork</a>
+        <a href="code.html">Code</a>
+        <a href="connectors.html">Connecteurs</a>
+        <a href="skills.html">Skills</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <span class="blob blob--1" style="background:#e2ecf3;"></span>
+      <div class="container reveal in">
+        <span class="eyebrow" style="background:#e2ecf3;border-color:#cfe0ec;color:#3f5d75;">🔌 Connecteurs</span>
+        <h1>Branchez Claude sur les applis que vous utilisez déjà.</h1>
+        <p class="hero-lede">Par défaut, Claude ne voit que votre conversation. Un <strong>connecteur</strong> lui ouvre une porte — vers Gmail, Google Drive, Notion, votre agenda… — pour qu'il puisse y chercher, lire et agir directement. Avec votre permission, et seulement sur ce que vous autorisez.</p>
+        <div class="pill-row">
+          <span class="pill"><span class="dot" style="background:#6a93b9;"></span> Vous choisissez les accès</span>
+          <span class="pill"><span class="dot" style="background:#6a93b9;"></span> Activable / révocable</span>
+          <span class="pill"><span class="dot" style="background:#6a93b9;"></span> Fonctionne avec Cowork</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- C'est quoi -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="split reveal">
+          <div class="split-text">
+            <span class="mini-eyebrow" style="color:#3f5d75;">💡 En une image</span>
+            <h3>Comme donner un trousseau de clés, badge par badge</h3>
+            <p>Sans connecteur, Claude est un expert enfermé dans une pièce : brillant, mais il ne voit que ce que vous lui apportez. Un connecteur lui remet la <strong>clé d'une seule pièce</strong> — votre boîte mail, par exemple — pour qu'il aille y travailler tout seul.</p>
+            <p>Vous gardez le trousseau : vous ajoutez ou retirez une clé quand vous voulez.</p>
+          </div>
+          <div class="split-media">
+            <div class="mock-window">
+              <div class="mock-bar">🔌 Connecteurs actifs</div>
+              <div class="mock-body">
+                <div class="file-row"><span class="ic">✉️</span> Gmail <span style="margin-left:auto;color:var(--code);font-weight:600;font-size:12px;">● connecté</span></div>
+                <div class="file-row"><span class="ic">📁</span> Google Drive <span style="margin-left:auto;color:var(--code);font-weight:600;font-size:12px;">● connecté</span></div>
+                <div class="file-row"><span class="ic">📝</span> Notion <span style="margin-left:auto;color:var(--text-muted);font-weight:600;font-size:12px;">+ ajouter</span></div>
+                <div class="file-row"><span class="ic">💬</span> Slack <span style="margin-left:auto;color:var(--text-muted);font-weight:600;font-size:12px;">+ ajouter</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e2ecf3;border-color:#cfe0ec;color:#3f5d75;">Un large catalogue</span>
+          <h2 class="section-title">Quelques connecteurs populaires</h2>
+          <p class="section-lede">Outils du quotidien, espaces de stockage, gestion de projet — l'écosystème s'agrandit sans cesse.</p>
+        </div>
+        <div class="logo-grid reveal">
+          <div class="logo-tile"><span class="logo-mark" style="background:#fce8e6;color:#ea4335;">✉️</span><span>Gmail</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#e8f0fe;color:#1a73e8;">📁</span><span>Google Drive</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#e6f4ea;color:#1e8e3e;">📅</span><span>Google Agenda</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#f1f1ef;color:#191919;">📝</span><span>Notion</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#f4e9f7;color:#611f69;">💬</span><span>Slack</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#eef1f4;color:#24292f;">🐙</span><span>GitHub</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#e9eefb;color:#2557d6;">🗂️</span><span>Microsoft 365</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#e7f8f4;color:#0d9488;">🎨</span><span>Canva</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#fdeef3;color:#d6336c;">✏️</span><span>Figma</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#eaf6ec;color:#2f9e44;">🧾</span><span>Supabase</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#f0ecfb;color:#6741d9;">📋</span><span>Linear</span></div>
+          <div class="logo-tile"><span class="logo-mark" style="background:#fff4e6;color:#e8590c;">➕</span><span>et bien plus</span></div>
+        </div>
+        <div class="callout reveal" style="background:#e2ecf3;border-color:#cfe0ec;">
+          <span class="c-ico">🛡️</span>
+          <div>
+            <h4>Une norme ouverte : le MCP</h4>
+            <p>Les connecteurs reposent sur le <strong>Model Context Protocol</strong>, un standard ouvert. Résultat : de plus en plus d'applis peuvent se brancher à Claude de façon sécurisée.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wahou -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e2ecf3;border-color:#cfe0ec;color:#3f5d75;">Le moment « wahou »</span>
+          <h2 class="section-title">Quand Claude touche vos vrais outils</h2>
+          <p class="section-lede">Là où ça devient bluffant : Claude ne décrit plus, il agit dans vos applis.</p>
+        </div>
+        <div class="wow-grid">
+          <div class="wow-card reveal">
+            <div class="wow-emoji">📬</div>
+            <h3>La boîte mail du lundi</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Résume mes e-mails non lus et prépare des brouillons de réponse. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude + Gmail</b>« 12 mails triés par priorité, 5 brouillons rédigés et prêts dans vos brouillons. »</div>
+            </div>
+          </div>
+          <div class="wow-card reveal" data-delay="1">
+            <div class="wow-emoji">🗓️</div>
+            <h3>L'agenda qui s'organise</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Trouve un créneau d'1 h cette semaine avec Léa et propose-le. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude + Agenda</b>« Jeudi 14 h libre pour vous deux. Invitation prête à envoyer. »</div>
+            </div>
+          </div>
+          <div class="wow-card reveal" data-delay="2">
+            <div class="wow-emoji">🔍</div>
+            <h3>La pépite enfouie dans le Drive</h3>
+            <div class="wow-io">
+              <div class="wow-in"><b>Vous</b>« Retrouve la dernière version du contrat client X et résume les changements. »</div>
+              <div class="wow-arrow">↓</div>
+              <div class="wow-out"><b>Claude + Drive</b>« Trouvé : « Contrat_X_v3 ». 3 modifications depuis la v2, les voici. »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment connecter -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e2ecf3;border-color:#cfe0ec;color:#3f5d75;">En pratique</span>
+          <h2 class="section-title">Connecter une appli en 3 étapes</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal" style="--accent:#6a93b9;">
+            <h3>Choisissez l'appli</h3>
+            <p>Dans les réglages de Claude, ouvrez les Connecteurs et sélectionnez l'outil voulu.</p>
+          </div>
+          <div class="step reveal" data-delay="1">
+            <h3>Autorisez l'accès</h3>
+            <p>Vous vous connectez à votre compte et accordez précisément les permissions.</p>
+          </div>
+          <div class="step reveal" data-delay="2">
+            <h3>Demandez à Claude</h3>
+            <p>C'est tout : Claude peut désormais agir dans cette appli quand vous le lui demandez.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sécurité -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e2ecf3;border-color:#cfe0ec;color:#3f5d75;">Confiance & contrôle</span>
+          <h2 class="section-title">Vos données restent les vôtres</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="feature-ico" style="background:#e2ecf3;color:#3f5d75;">🔐</div>
+            <h3>Permissions précises</h3>
+            <p>Vous décidez à quelles applis et à quelles données Claude a accès.</p>
+          </div>
+          <div class="feature reveal" data-delay="1">
+            <div class="feature-ico" style="background:#e2ecf3;color:#3f5d75;">🔄</div>
+            <h3>Révocable à tout moment</h3>
+            <p>Débranchez un connecteur d'un clic ; l'accès s'arrête aussitôt.</p>
+          </div>
+          <div class="feature reveal" data-delay="2">
+            <div class="feature-ico" style="background:#e2ecf3;color:#3f5d75;">✋</div>
+            <h3>Demande avant d'agir</h3>
+            <p>Pour les actions sensibles (envoyer, modifier), Claude vous consulte d'abord.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow" style="background:#e2ecf3;border-color:#cfe0ec;color:#3f5d75;">Bon à savoir</span>
+          <h2 class="section-title">Questions fréquentes</h2>
+        </div>
+        <div class="faq reveal">
+          <div class="faq-item">
+            <button class="faq-q">Un connecteur, est-ce sûr ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Vous accordez vous-même l'accès, appli par appli, et vous pouvez le retirer à tout moment. Pour les actions importantes, Claude demande confirmation avant d'agir.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Quelle différence avec une Skill ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Un connecteur donne à Claude <strong>l'accès à une appli</strong> (le « où »). Une <a href="skills.html" style="color:#3f5d75;font-weight:600;">Skill</a> lui apprend <strong>une compétence</strong> (le « comment »). Les deux se complètent à merveille.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Dois-je tout connecter ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Non. Ne branchez que ce dont vous avez besoin. Vous pouvez très bien commencer avec un seul connecteur, puis en ajouter d'autres plus tard.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Est-ce que ça marche avec Cowork ? <span class="plus"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Oui, et c'est là que la magie opère : <a href="cowork.html" style="color:#3f5d75;font-weight:600;">Cowork</a> peut dérouler une tâche entière en puisant directement dans vos applis connectées.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal" style="background:linear-gradient(135deg,#6a93b9,#3f5d75);">
+          <h2>Le « comment » : les Skills</h2>
+          <p>Les connecteurs donnent l'accès. Les Skills apprennent les gestes. Découvrez comment Claude acquiert de nouvelles compétences.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn--primary" href="skills.html" style="color:#3f5d75;">Découvrir les Skills</a>
+            <a class="btn btn--ghost" href="index.html">Retour à l'accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">
+            <span class="brand-mark" style="animation:none;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l1.9 7.1 5.4-3.1-3.1 5.4 7.1 1.9-7.1 1.9 3.1 5.4-5.4-3.1L12 22.5l-1.9-7.1-5.4 3.1 3.1-5.4-7.1-1.9 7.1-1.9-3.1-5.4 5.4 3.1z"/></svg>
+            </span>
+            ClaudeTools
+          </span>
+          <p>Un guide indépendant et accessible aux débutants sur la famille d'outils Claude. Sans affiliation avec Anthropic.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <a href="claude.html">Claude</a>
+          <a href="cowork.html">Cowork</a>
+          <a href="code.html">Code</a>
+          <a href="connectors.html">Connecteurs</a>
+          <a href="skills.html">Skills</a>
+        </div>
+        <div class="footer-col">
+          <h4>En savoir plus</h4>
+          <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>
+          <a href="https://docs.anthropic.com" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ClaudeTools — un projet éducatif.</span>
+        <span>Réalisé avec la palette de couleurs Claude 🎨</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
