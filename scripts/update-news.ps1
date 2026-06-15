@@ -36,17 +36,37 @@ Tu maintiens le fil d'actualités du site ClaudeTools (le dépôt git du dossier
 2. Recherche sur le web les actualités RÉCENTES (idéalement des deux derniers mois) de l'univers Claude d'Anthropic : nouveaux modèles, Claude Code, Claude Cowork, Connecteurs / MCP, Agent Skills, et annonces d'entreprise. Privilégie anthropic.com et la presse tech réputée. Évite les rumeurs et le clickbait.
 3. Sélectionne 5 à 8 nouvelles fiables et marquantes.
 4. Réécris ENTIÈREMENT le fichier assets/data/news.js en respectant le format : un court commentaire d'en-tête, puis `window.CLAUDE_NEWS_UPDATED = "AAAA-MM-JJ";` (la date d'aujourd'hui), puis `window.CLAUDE_NEWS = [ ... ];`. Chaque entrée a EXACTEMENT ces champs : date (AAAA-MM-JJ), tag (un seul parmi : Modèle, Produit, Code, Cowork, Connecteurs, Skills, Entreprise), title (court), summary (1 à 2 phrases neutres EN FRANÇAIS), url (lien vers la source). Trie les entrées par date décroissante. Mets CLAUDE_NEWS_UPDATED à la date du jour.
-5. Ne modifie AUCUN autre fichier.
-6. Si et seulement si le contenu de news.js a réellement changé : exécute `git add assets/data/news.js`, puis `git commit -m "chore: maj actualités"`, puis `git push`. Sinon, ne committe rien.
+5. Ne modifie AUCUN autre fichier que assets/data/news.js.
+6. NE FAIS AUCUNE commande git (pas de git add / commit / push) : le script s'en charge automatiquement après toi.
 
 Travaille de façon autonome, sans poser de question.
 '@
 
 # -p : mode non-interactif (headless).
-# Permissions VOLONTAIREMENT limitées (pas de bypass total) : édition de fichiers,
-# recherche web, et commandes git uniquement. Claude ne peut rien faire d'autre.
+# Permissions VOLONTAIREMENT limitées (pas de bypass total) : Claude ne fait QUE
+# l'édition du fichier et la recherche web. La partie git est gérée par le script
+# (déterministe), pas par le LLM — sinon le push peut être « oublié ».
 # $null en entrée évite l'attente de stdin quand la tâche tourne sans console.
-$allowed = 'Read,Glob,Grep,Edit,Write,WebSearch,WebFetch,Bash(git:*)'
+$allowed = 'Read,Glob,Grep,Edit,Write,WebSearch,WebFetch'
 $null | & $claude -p $prompt --permission-mode acceptEdits --allowedTools $allowed 2>&1 | Tee-Object -FilePath $log -Append
+
+# --- Étape git déterministe : c'est le SCRIPT qui commit + push, pas Claude ---
+$newsFile = 'assets/data/news.js'
+git add $newsFile
+
+# Y a-t-il réellement un changement à publier ? (exit 1 de --quiet = différences présentes)
+git diff --cached --quiet -- $newsFile
+if ($LASTEXITCODE -ne 0) {
+  $stamp = Get-Date -Format 'yyyy-MM-dd'
+  git commit -m "chore: maj actualites Claude ($stamp)" | Out-File -FilePath $log -Append -Encoding utf8
+  git push origin HEAD 2>&1 | Tee-Object -FilePath $log -Append
+  if ($LASTEXITCODE -eq 0) {
+    "==== $(Get-Date -Format o) : commit + push OK ====" | Out-File -FilePath $log -Append -Encoding utf8
+  } else {
+    "==== $(Get-Date -Format o) : ERREUR git push (exit $LASTEXITCODE) ====" | Out-File -FilePath $log -Append -Encoding utf8
+  }
+} else {
+  "==== $(Get-Date -Format o) : aucun changement dans news.js, rien a publier ====" | Out-File -FilePath $log -Append -Encoding utf8
+}
 
 "==== $(Get-Date -Format o) : terminé (exit $LASTEXITCODE) ====" | Out-File -FilePath $log -Append -Encoding utf8
