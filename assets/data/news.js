@@ -14,48 +14,58 @@
      summary: "1 à 2 phrases en français, claires et neutres.",
      url:     "https://www.anthropic.com/news/..."   // lien source (optionnel)
    }
-
-   ⚠️ Les entrées ci-dessous sont des EXEMPLES de départ.
-      L'automatisation (voir NEWS.md) doit remplacer ce
-      tableau par les vraies actualités les plus récentes.
    ========================================================= */
 
-window.CLAUDE_NEWS_UPDATED = "2026-06-12";
+window.CLAUDE_NEWS_UPDATED = "2026-06-15";
 
 window.CLAUDE_NEWS = [
   {
-    date: "2026-06-05",
-    tag: "Skills",
-    title: "Les Agent Skills s'étendent",
-    summary: "Les Skills permettent à Claude de charger automatiquement un savoir-faire (créer un PowerPoint, un Excel, suivre une charte) au bon moment, dans les applis comme dans Claude Code.",
-    url: "https://www.anthropic.com/news"
+    date: "2026-06-12",
+    tag: "Entreprise",
+    title: "Accès suspendu à Fable 5 et Mythos 5",
+    summary: "Anthropic indique suspendre l'accès à Claude Fable 5 et Claude Mythos 5 à la suite d'une directive du gouvernement américain, peu après leur lancement.",
+    url: "https://www.anthropic.com/news/fable-mythos-access"
   },
   {
-    date: "2026-05-20",
+    date: "2026-06-11",
+    tag: "Entreprise",
+    title: "Lancement de Claude Corps",
+    summary: "Anthropic présente Claude Corps, un programme national de bourses destiné aux profils en début de carrière qui souhaitent étendre les bénéfices de l'IA à leurs communautés.",
+    url: "https://www.anthropic.com/news/claude-corps"
+  },
+  {
+    date: "2026-06-09",
     tag: "Modèle",
-    title: "Famille Claude Opus 4.x",
-    summary: "Les modèles Opus 4.x renforcent le raisonnement, la fiabilité sur les tâches longues et la qualité du code, avec un niveau d'effort réglable.",
-    url: "https://www.anthropic.com/news"
+    title: "Claude Fable 5 et Claude Mythos 5",
+    summary: "Anthropic dévoile Claude Fable 5, présenté comme son modèle le plus performant à ce jour (code, vision, contexte long), aux côtés de Mythos 5, sa variante réservée à des usages autorisés.",
+    url: "https://www.anthropic.com/news/claude-fable-5-mythos-5"
   },
   {
-    date: "2026-04-30",
-    tag: "Connecteurs",
-    title: "Toujours plus de connecteurs (MCP)",
-    summary: "Grâce au Model Context Protocol, Claude se branche à de nouvelles applis (Drive, Notion, Slack, agenda…) pour agir directement sur vos données, avec votre accord.",
-    url: "https://www.anthropic.com/news"
+    date: "2026-05-28",
+    tag: "Modèle",
+    title: "Claude Opus 4.8",
+    summary: "Le nouveau modèle Opus 4.8 progresse sur le code, les tâches agentiques et le travail professionnel, avec un accent sur la fiabilité — environ quatre fois moins susceptible que Opus 4.7 de laisser passer un défaut dans le code qu'il produit.",
+    url: "https://www.anthropic.com/news/claude-opus-4-8"
   },
   {
-    date: "2026-04-10",
+    date: "2026-05-28",
     tag: "Code",
-    title: "Claude Code gagne en autonomie",
-    summary: "Claude Code lit tout le projet, exécute des commandes et orchestre des tâches complexes dans le terminal et l'éditeur, avec des garde-fous de validation.",
-    url: "https://www.anthropic.com/news"
+    title: "Dynamic Workflows dans Claude Code",
+    summary: "Lancée avec Opus 4.8, la fonctionnalité « dynamic workflows » permet à Claude Code d'orchestrer en parallèle de nombreux sous-agents pour traiter des tâches de grande ampleur.",
+    url: "https://www.anthropic.com/news/claude-opus-4-8"
   },
   {
-    date: "2026-03-15",
-    tag: "Cowork",
-    title: "Claude Cowork, le coéquipier IA",
-    summary: "Confiez une tâche complète à Claude : il planifie, déroule les étapes et vous rend un résultat fini à valider — idéal pour les projets multi-étapes.",
-    url: "https://www.anthropic.com/news"
+    date: "2026-05-14",
+    tag: "Entreprise",
+    title: "Partenariat élargi avec PwC",
+    summary: "Anthropic et PwC étendent leur alliance : un Centre d'excellence commun et un programme visant à former et certifier 30 000 professionnels de PwC à l'usage de Claude.",
+    url: "https://www.anthropic.com/news/pwc-expanded-partnership"
+  },
+  {
+    date: "2026-05-06",
+    tag: "Code",
+    title: "Code with Claude 2026",
+    summary: "Lors de sa conférence développeurs, Anthropic présente plusieurs nouveautés autour de Claude Code et de sa plateforme : agents managés et multi-agents, agents distants, « routines » et correction automatique en intégration continue.",
+    url: "https://www.infoq.com/news/2026/05/code-with-claude/"
   }
 ];
