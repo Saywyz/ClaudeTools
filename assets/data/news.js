@@ -31,14 +31,14 @@ window.CLAUDE_NEWS = [
     tag: "Code",
     title: "Artifacts dans Claude Code",
     summary: "Claude Code peut désormais générer des « Artifacts » : des pages web partageables produites depuis une session, dont les mises à jour sont publiées automatiquement à la même URL. La fonctionnalité est en bêta pour les organisations Team et Enterprise.",
-    url: "https://releasebot.io/updates/anthropic"
+    url: "https://claude.com/blog/artifacts-in-claude-code"
   },
   {
     date: "2026-06-17",
     tag: "Entreprise",
     title: "Ouverture d'un bureau à Séoul",
-    summary: "Anthropic ouvre un bureau à Séoul et annonce de nouveaux partenariats au sein de l'écosystème IA coréen pour accompagner l'adoption de Claude dans la région.",
-    url: "https://www.anthropic.com/news"
+    summary: "Anthropic ouvre un bureau à Séoul — son troisième en Asie-Pacifique — et annonce de nouveaux partenariats au sein de l'écosystème IA coréen (LG CNS, Samsung SDS, NAVER, Nexon) pour accompagner l'adoption de Claude dans la région.",
+    url: "https://www.anthropic.com/news/seoul-becomes-third-anthropic-office-in-asia-pacific"
   },
   {
     date: "2026-06-12",
