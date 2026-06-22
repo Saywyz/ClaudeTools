@@ -16,56 +16,63 @@
    }
    ========================================================= */
 
-window.CLAUDE_NEWS_UPDATED = "2026-06-15";
+window.CLAUDE_NEWS_UPDATED = "2026-06-22";
 
 window.CLAUDE_NEWS = [
+  {
+    date: "2026-06-18",
+    tag: "Connecteurs",
+    title: "Connecteurs MCP gérés par l'entreprise",
+    summary: "Anthropic introduit l'autorisation centralisée des connecteurs MCP via le fournisseur d'identité (à commencer par Okta) : un administrateur autorise un connecteur une seule fois et les utilisateurs y accèdent automatiquement à la première connexion, dans Claude, Claude Code et Cowork.",
+    url: "https://releasebot.io/updates/anthropic"
+  },
+  {
+    date: "2026-06-18",
+    tag: "Code",
+    title: "Artifacts dans Claude Code",
+    summary: "Claude Code peut désormais générer des « Artifacts » : des pages web partageables produites depuis une session, dont les mises à jour sont publiées automatiquement à la même URL. La fonctionnalité est en bêta pour les organisations Team et Enterprise.",
+    url: "https://releasebot.io/updates/anthropic"
+  },
+  {
+    date: "2026-06-17",
+    tag: "Entreprise",
+    title: "Ouverture d'un bureau à Séoul",
+    summary: "Anthropic ouvre un bureau à Séoul et annonce de nouveaux partenariats au sein de l'écosystème IA coréen pour accompagner l'adoption de Claude dans la région.",
+    url: "https://www.anthropic.com/news"
+  },
   {
     date: "2026-06-12",
     tag: "Entreprise",
     title: "Accès suspendu à Fable 5 et Mythos 5",
-    summary: "Anthropic indique suspendre l'accès à Claude Fable 5 et Claude Mythos 5 à la suite d'une directive du gouvernement américain, peu après leur lancement.",
-    url: "https://www.anthropic.com/news/fable-mythos-access"
-  },
-  {
-    date: "2026-06-11",
-    tag: "Entreprise",
-    title: "Lancement de Claude Corps",
-    summary: "Anthropic présente Claude Corps, un programme national de bourses destiné aux profils en début de carrière qui souhaitent étendre les bénéfices de l'IA à leurs communautés.",
-    url: "https://www.anthropic.com/news/claude-corps"
+    summary: "Moins d'une semaine après leur lancement, Anthropic indique suspendre l'accès à Claude Fable 5 et Claude Mythos 5 à la suite d'une directive de contrôle des exportations du gouvernement américain.",
+    url: "https://www.infoq.com/news/2026/06/claude-5-release/"
   },
   {
     date: "2026-06-09",
     tag: "Modèle",
     title: "Claude Fable 5 et Claude Mythos 5",
-    summary: "Anthropic dévoile Claude Fable 5, présenté comme son modèle le plus performant à ce jour (code, vision, contexte long), aux côtés de Mythos 5, sa variante réservée à des usages autorisés.",
-    url: "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+    summary: "Anthropic dévoile Claude Fable 5, présenté comme son modèle grand public le plus performant (résultats à l'état de l'art sur la quasi-totalité des tests), avec une réflexion adaptative permanente, un contexte d'un million de tokens et 128K tokens en sortie, aux côtés de la variante Mythos 5.",
+    url: "https://www.infoq.com/news/2026/06/claude-5-release/"
+  },
+  {
+    date: "2026-06-05",
+    tag: "Cowork",
+    title: "Doublement temporaire des limites de Cowork",
+    summary: "Du 5 juin au 5 juillet 2026, Anthropic double la limite d'usage sur 5 heures dans Claude Cowork, sans action requise, pour les offres Pro, Max et Team (les limites hebdomadaires restant inchangées).",
+    url: "https://thenewstack.io/anthropic-claude-cowork-promotion/"
+  },
+  {
+    date: "2026-06-01",
+    tag: "Entreprise",
+    title: "Dépôt confidentiel en vue d'une introduction en bourse",
+    summary: "Anthropic a transmis de façon confidentielle un projet de document d'enregistrement (Form S-1) à la SEC américaine, en vue d'une éventuelle introduction en bourse de ses actions ordinaires.",
+    url: "https://www.anthropic.com/news/confidential-draft-s1-sec"
   },
   {
     date: "2026-05-28",
     tag: "Modèle",
     title: "Claude Opus 4.8",
-    summary: "Le nouveau modèle Opus 4.8 progresse sur le code, les tâches agentiques et le travail professionnel, avec un accent sur la fiabilité — environ quatre fois moins susceptible que Opus 4.7 de laisser passer un défaut dans le code qu'il produit.",
-    url: "https://www.anthropic.com/news/claude-opus-4-8"
-  },
-  {
-    date: "2026-05-28",
-    tag: "Code",
-    title: "Dynamic Workflows dans Claude Code",
-    summary: "Lancée avec Opus 4.8, la fonctionnalité « dynamic workflows » permet à Claude Code d'orchestrer en parallèle de nombreux sous-agents pour traiter des tâches de grande ampleur.",
-    url: "https://www.anthropic.com/news/claude-opus-4-8"
-  },
-  {
-    date: "2026-05-14",
-    tag: "Entreprise",
-    title: "Partenariat élargi avec PwC",
-    summary: "Anthropic et PwC étendent leur alliance : un Centre d'excellence commun et un programme visant à former et certifier 30 000 professionnels de PwC à l'usage de Claude.",
-    url: "https://www.anthropic.com/news/pwc-expanded-partnership"
-  },
-  {
-    date: "2026-05-06",
-    tag: "Code",
-    title: "Code with Claude 2026",
-    summary: "Lors de sa conférence développeurs, Anthropic présente plusieurs nouveautés autour de Claude Code et de sa plateforme : agents managés et multi-agents, agents distants, « routines » et correction automatique en intégration continue.",
-    url: "https://www.infoq.com/news/2026/05/code-with-claude/"
+    summary: "Anthropic lance Opus 4.8, qui progresse sur le code, les tâches agentiques et le travail professionnel, et devient le modèle par défaut pour les offres Max, Team Premium et Enterprise ainsi que sur l'API.",
+    url: "https://9to5mac.com/2026/05/28/anthropic-upgrades-claude-with-new-opus-4-8-model-heres-whats-new/"
   }
 ];
